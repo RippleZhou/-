@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>积分中心</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="../../css/weui.min.css">
+		<link rel="stylesheet" href="../../css/jquery-weui.css">
+		<link rel="stylesheet" href="../../css/style.css">
+		<link rel="stylesheet" type="text/css" href="../../css/index.css" />
+	</head>
+
+	<body ontouchstart>
+
+		<!--主体-->
+		<div class='weui-content'>
+			<!--顶部轮播-->
+			<div class="swiper-container swiper-banner">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="../Mall/detail.html"><img src="../../img/1_03.png" /></a>
+					</div>
+					<div class="swiper-slide">
+						<a href="../Mall/detail.html"><img src="../../img/photo1 (1).png" /></a>
+					</div>
+					<div class="swiper-slide">
+						<a href="../Mall/detail.html"><img src="../../img/photo1 (2).png" /></a>
+					</div>
+					<div class="swiper-slide">
+						<a href="../Mall/detail.html"><img src="../../img/photo1 (1).png" /></a>
+					</div>
+					<div class="swiper-slide">
+						<a href="../Mall/detail.html"><img src="../../img/photo1 (2).png" /></a>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+			<!--会员页-->
+			<div class="goldMenbers">
+				<div class="goldUser">
+					<a href="integralReport .html">
+						<p class="goldOrdinary"><a href="integralReport .html"><span>黄金会员</span><span><i>123456</i>积分</span></a></p>
+						<span class="buyView"><a href="integralReport .html">点击查看积分详情</a></span>
+					</a>
+				</div>
+			</div>
+			<!--签到-->
+			<div class="checkIn">
+				<div class="theCheck">
+					<div class="qiandaoImg">
+						<img src="../../img/jifen_03.png"/>
+					</div>
+					<div class="signToday">
+						<p id="loginText">登录第<span>7</span>天，获得<span>19</span>积分</p>
+					</div>
+					<div class="click">
+						<input type="button" id="loginBtn" value="签到" />
+					</div>
+				</div>
+			</div>
+
+			<!--连续签到提示-->
+			<div class="continuous">
+				<p>连续签到越长，单日奖励越高</p>
+			</div>
+			<!--趣玩乐-->
+			<div class="funAndFun">
+				<div class="fun">
+					<div class="funImg">
+						<img src="../../img/share.png" />
+					</div>
+					<div class="theFun">
+						<p>趣玩乐</p>
+						<p>分享咨询积分涨</p>
+					</div>
+					<div class="goTo">
+						<p>
+							<a href="">前往</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="funAndFun">
+				<div class="fun">
+					<div class="funImg">
+						<img src="../../img/phone.png" />
+					</div>
+					<div class="theFun">
+						<p>邀好友</p>
+						<p>积分不够基友凑</p>
+					</div>
+					<div class="goTo">
+						<p>
+							<a href="../invite/Invitee.html">前往</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="funAndFun">
+				<div class="fun">
+					<div class="funImg">
+						<img src="../../img/flower.png" />
+					</div>
+					<div class="theFun">
+						<p>购福利</p>
+						<p>福袋浓浓积分返</p>
+					</div>
+					<div class="goTo">
+						<p>
+							<a href="../Mall/detail.html">前往</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../js/jquery-2.1.4.js"></script>
+		<script src="../../js/fastclick.js"></script>
+		<script>
+			$(function() {
+				FastClick.attach(document.body);
+			});
+		</script>
+		<script src="../../js/jquery-weui.js"></script>
+		<script src="../../js/swiper.js"></script>
+		<script>
+			$(".swiper-banner").swiper({
+				loop: true,
+				autoplay: 3000
+			});
+		</script>
+		<script>
+			window.onload = function() {
+				var oText = document.getElementById("loginText");
+				var oBtn = document.getElementById("loginBtn");
+				oBtn.onclick = function() {
+					oText.innerText = '今日已签到,已获得19积分';
+					oText.className = 'on';
+					oBtn.value = '已签到';
+					oBtn.style.color = "#ccc"
+					oBtn.style.background = "#fff"
+				};
+
+			};
+		</script>
+	</body>
+
+</html>

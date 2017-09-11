@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>密码修改</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="../../css/weui.min.css">
+		<link rel="stylesheet" href="../../css/jquery-weui.css">
+		<link rel="stylesheet" href="../../css/style.css">
+		<link rel="stylesheet" type="text/css" href="../../css/index.css" />
+	</head>
+
+	<body ontouchstart>
+		<!--主体-->
+		<header class="wy-header-password">
+			<div class="wy-header-icon-back"><span></span></div>
+			<div class="wy-header-icon-right">
+				<p>修改登录密码</p>
+			</div>
+		</header>
+		<div class="lg-title"><img src="../../img/backOne.png" width="100%" height="100%" /></div>
+		<div class="wy-header-title_one">登录密码修改</div>
+		<section class="weui-content_bar">
+			<div class="weui-logo_content">
+				<div class="weui-password">
+					<input class="weui-input-password" type="password" pattern="[0-9]*" placeholder="请输入原始密码">
+				</div>
+				<div class="weui-password">
+					<input class="weui-input-password" type="password" pattern="[0-9]*" placeholder="请输入新密码">
+				</div>
+				<div class="weui-ConfirmPassword">
+					<input class="weui-input-passwordTwo" type="password" pattern="[0-9]*" placeholder="请再次确认密码">
+				</div>
+				<!--<div class="weui-tel_number">
+					<input type="text" placeholder="&nbsp; 请输入手机号" id="tel" />
+				</div>
+				<div class="weui-num_yzm">
+					<div class="weui-yzm">
+						<input type="text" placeholder="&nbsp; 请输入验证码" id="yzm" />
+						<div class="validate_button">获取验证码</div>
+						<div class="hidden_button">
+							<span></span>
+							<em>S后内失效</em>
+						</div>
+					</div>
+				</div>-->
+				<div class="weui-btn-Change">
+					<a href="javascript:;" class="weui-btn_confirm">确认修改</a>
+				</div>
+			</div>
+		</section>
+		<!--底部导航-->
+		<div class="foot-black"></div>
+		<div class="weui-tabbar">
+			<a href="../shopCar/shopcart.html" class="weui-tabbar__item">
+				<div class="weui-tabbar__icon foot-menu-cart">
+				</div>
+				<p class="weui-tabbar__label">购物车</p>
+			</a>
+			<a href="../Mall/indexOne.html" class="weui-tabbar__item">
+				<div class="weui-tabbar__icon foot-menu-member">
+				</div>
+				<p class="weui-tabbar__label ">积分商城</p>
+			</a>
+			<a href="../information/myIformation.html" class="weui-tabbar__item">
+				<div class="weui-tabbar__icon foot-menu-home">
+				</div>
+				<p class="weui-tabbar__label">我的信息</p>
+			</a>
+		</div>
+		<script src="../../js/jquery-2.1.4.js"></script>
+		<script type="text/javascript" src="../../js/jquery-weui.js"></script>
+		<script type="text/javascript" src="../../js/fastclick.js"></script>
+		<script>
+			$(function() {
+				FastClick.attach(document.body);
+			});
+		</script>
+		<!--<script type="text/javascript">
+			$(function() {
+				$(".validate_button").click(function() {
+					$(".hidden_button span").text(60);
+					$(this).hide();
+					$(".hidden_button").show();
+					var icount = 59;
+					var time = setInterval(auto, 1000);
+
+					function auto() {
+						$(".hidden_button span").text(icount);
+						icount--;
+						if(icount == 0) {
+							clearTimeout(time);
+							$(".validate_button").show();
+							$(".hidden_button").hide();
+						}
+					}
+				});
+			})
+		</script>-->
+	</body>
+
+</html>

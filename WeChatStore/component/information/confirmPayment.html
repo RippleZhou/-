@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>商城首页</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="../../css/weui.min.css">
+		<link rel="stylesheet" href="../../css/jquery-weui.css">
+		<link rel="stylesheet" href="../../css/style.css">
+		<link rel="stylesheet" type="text/css" href="../../css/index.css" />
+	</head>
+
+	<body ontouchstart style="background: #f4f4f4;">
+
+		<header class="wy-header_conPay">
+			<div class="wy-header-icon-back"><span></span></div>
+			<div class="wy-header-icon-right">
+				<p>支付提交</p>
+			</div>
+		</header>
+		<!--主体-->
+		<div class="weui-pay_more">
+			<div class="weui-pay_address">
+				<p>江苏省南京市江宁区秣周东路紫金创业特别社区3栋111室</p>
+				<p><span>Simons源叔</span>&nbsp;&nbsp;<span>12399991234</span></p>
+				<p>订单号：<span>12345678901</span></p>
+			</div>
+			<div class="weui-pay_Img">
+				<ul class="weui-uploader__files clear mg-com-img">
+					<li class="weui-uploader__file" style="background-image:url(../../img/11.png)"></li>
+					<li class="weui-uploader__file" style="background-image:url(../../img/e.png)"></li>
+					<li class="weui-uploader__file" style="background-image:url(../../img/22.png)"></li>
+				</ul>
+			</div>
+			<div class="weui-pay_other">
+				<p>运费：<span>10</span>元</p>
+				<p>可用积分：<span>276000</span></p>
+				<p>使用积分：<input type="text" placeholder="请输入使用积分数" class="integral" /></p>
+				<p>总积分：<span>23600</span>元</p>
+			</div>
+		</div>
+		<div class="weui-pay_password">
+			<p>请输入您的支付密码</p>
+			<p><input type="password" placeholder="请输入支付密码" /></p>
+		</div>
+		<div class="weui-pay_integral">
+			<p>请使用钱包内积分支付</p>
+			<div class="weui-integral">
+				<p>
+					<a href="">积分支付</a>
+				</p>
+			</div>
+		</div>
+		<!--<div class="weui-pay_weChat">
+			<p>扣除积分后待支付：<span>432.10</span>元，请点击微信支付</p>
+			<div class="weui-weChat">
+				<p>
+					<a href="">微信支付</a>
+				</p>
+			</div>
+		</div>-->
+		
+		<!--底部导航-->
+		<div class="foot-black"></div>
+		<div class="weui-tabbar">
+			<a href="../shopCar/shopcart.html" class="weui-tabbar__item">
+				<div class="weui-tabbar__icon foot-menu-cart">
+				</div>
+				<p class="weui-tabbar__label">购物车</p>
+			</a>
+			<a href="../Mall/indexOne.html" class="weui-tabbar__item">
+				<div class="weui-tabbar__icon foot-menu-member">
+				</div>
+				<p class="weui-tabbar__label ">积分商城</p>
+			</a>
+			<a href="../information/myIformation.html" class="weui-tabbar__item">
+				<div class="weui-tabbar__icon foot-menu-home">
+				</div>
+				<p class="weui-tabbar__label">我的信息</p>
+			</a>
+		</div>
+
+		<script src="../../js/jquery-2.1.4.js"></script>
+		<script src="../../js/fastclick.js"></script>
+		<script>
+			$(function() {
+				FastClick.attach(document.body);
+			});
+		</script>
+		<script src="../../js/jquery-weui.js"></script>
+	</body>
+
+</html>

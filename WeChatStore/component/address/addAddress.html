@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>地址管理</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="../../css/weui.min.css">
+		<link rel="stylesheet" href="../../css/jquery-weui.css">
+		<link rel="stylesheet" href="../../css/style.css">
+		<link rel="stylesheet" type="text/css" href="../../css/index.css" />
+	</head>
+
+	<body ontouchstart>
+		<!--主体-->
+		<header class="wy-header-addAddress">
+			<div class="wy-header-icon-back"><span></span></div>
+			<div class="wy-header-icon-right">
+				<p>个人中心</p>
+			</div>
+		</header>
+		<div class="weui-cells weui-cells_form wy-address-edit" style="margin-top: 0px;">
+			<div class="weui-cell">
+				<div class="weui-cell__hd"><label class="weui-label wy-lab">姓名</label></div>
+				<div class="weui-cell__bd"><input class="weui-input" type="number" pattern="[0-9]*" placeholder="请填写正确姓名"></div>
+			</div>
+			<div class="weui-cell">
+				<div class="weui-cell__hd"><label class="weui-label wy-lab">手机号</label></div>
+				<div class="weui-cell__bd"><input class="weui-input" type="number" pattern="[0-9]*" placeholder="请填写收货人手机号"></div>
+			</div>
+			<div class="weui-cell">
+				<div class="weui-cell__hd"><label class="weui-label wy-lab">邮箱</label></div>
+				<div class="weui-cell__bd"><input class="weui-input" type="number" pattern="[0-9]*" placeholder="请输入邮箱"></div>
+			</div>
+			<div class="weui-cell">
+				<div class="weui-cell__hd"><label for="name" class="weui-label wy-lab">所在地区</label></div>
+				<div class="weui-cell__bd"><input class="weui-input" id="address" type="text" value="湖北省 武汉市 武昌区" readonly="" data-code="420106" data-codes="420000,420100,420106"></div>
+			</div>
+			<div class="weui-cell">
+				<div class="weui-cell__hd"><label class="weui-label wy-lab">详细地址</label></div>
+				<div class="weui-cell__bd">
+					<textarea class="weui-textarea" placeholder="江苏省南京市江宁区秣周东路紫金创业社区4号楼xxx室"></textarea>
+				</div>
+			</div>
+			<div class="weui-cell weui-cell_switch">
+				<div class="weui-cell__bd">设为默认地址</div>
+				<div class="weui-cell__ft"><input class="weui-switch" type="checkbox"></div>
+			</div>
+		</div>
+		<div class="weui-btn-address_botton">
+			<a class="weui-btn weui-btn_primary" href="javascript:" id="showTooltips">保存此地址</a>
+			<a href="javascript:;" class="weui-btn weui-btn_warn">删除此地址</a>
+		</div>
+		<!--底部导航-->
+		<div class="foot-black"></div>
+		<div class="weui-tabbar">
+			<a href="../shopCar/shopcart.html" class="weui-tabbar__item">
+				<div class="weui-tabbar__icon foot-menu-cart">
+				</div>
+				<p class="weui-tabbar__label">购物车</p>
+			</a>
+			<a href="../Mall/indexOne.html" class="weui-tabbar__item">
+				<div class="weui-tabbar__icon foot-menu-member">
+				</div>
+				<p class="weui-tabbar__label ">积分商城</p>
+			</a>
+			<a href="../information/myIformation.html" class="weui-tabbar__item">
+				<div class="weui-tabbar__icon foot-menu-home">
+				</div>
+				<p class="weui-tabbar__label">我的信息</p>
+			</a>
+		</div>
+		<script src="../../js/jquery-2.1.4.js"></script>
+		<script src="../../js/fastclick.js"></script>
+		<script type="text/javascript" src="../../js/city-picker.js" ></script>
+		<script type="text/javascript" src="../../js/jquery.Spinner.js"></script>
+		<script>
+			$(function() {
+				FastClick.attach(document.body);
+			});
+		</script>
+		<script src="../../js/jquery-weui.js"></script>
+		<script>
+			$("#address").cityPicker({
+				title: "选择出发地",
+				onChange: function(picker, values, displayValues) {
+					console.log(values, displayValues);
+				}
+			});
+		</script>
+	</body>
+
+</html>
