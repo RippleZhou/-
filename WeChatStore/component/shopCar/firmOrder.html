@@ -21,20 +21,74 @@
 		</header>
 		<div class="wy-media-box weui-media-box_text address-select">
 			<div class="weui-media-box_appmsg">
-				<div class="weui-media-box__hd proinfo-txt-l" style="width:20px;"><span class="promotion-label-tit"><img src="../../img/icon_nav_city.png" /></span></div>
+				<div class="weui-media-box__hd proinfo-txt-l" style="width:0px;"><span class="promotion-label-tit"><img src="../../img/icon_nav_city.png" /></span></div>
 				<div class="weui-media-box__bd">
-					<a href="address_list.html" class="weui-cell_access">
-						<h4 class="address-name"><span>Simons源叔</span><span>13854652512</span></h4>
+					<div>
+						<input type="checkbox" checked="checked"><a href="../address/address_list.html" class="weui-cell_access">
+						<h4 class="address-name"><span>Simons源叔</span><span>13854652512</span><span class="default-add">默认地址</span></h4>
 						<div class="address-txt">江苏省南京市XX区XXX街道XXX小区XXX栋X0X室</div>
-						<span class="default-add">默认地址</span>
 					</a>
+					</div>
+					<div>
+						<input type="checkbox" >
+						<a href="../address/address_list.html" class="weui-cell_access">
+						<h4 class="address-name"><span>Simons源叔</span><span>13854652512</span><span class="default-add"></span></h4>
+						<div class="address-txt">江苏省南京市XX区XXX街道XXX小区XXX栋X0X室</div>
+					</a>
+					</div>
+					<a href="#" id="add_address" style="cursor:pointer;">
+						+ 新增收货地址
+					</a>
+					<p>配送方式:
+						<form action="" method="get"  style="margin-left:10px"> 
+							<label><input name="Fruit" type="checkbox" value="" />快递 </label> 
+							<label><input name="Fruit" type="checkbox" value="" />EMS </label> 
+							<label><input name="Fruit" type="checkbox" value="" />平邮 </label> 
+							<label><input name="Fruit" type="checkbox" value="" />顺丰 </label> 
+						</form> 
+					</p>
+					<div class="add_model" id="add-address">
+						<div class="weui-cells weui-cells_form wy-address-edit" style="margin-top: 0px;">
+						<div class="weui-cell">
+						<div class="weui-cell__hd"><label class="weui-label wy-lab">姓名</label></div>
+						<div class="weui-cell__bd"><input class="weui-input" type="" pattern="[0-9]*" placeholder="请填写正确姓名"></div>
+					</div>
+					<div class="weui-cell">
+						<div class="weui-cell__hd"><label class="weui-label wy-lab">手机号</label></div>
+						<div class="weui-cell__bd"><input class="weui-input" type="number" pattern="[0-9]*" placeholder="请填写收货人手机号"></div>
+					</div>
+					<div class="weui-cell">
+						<div class="weui-cell__hd"><label class="weui-label wy-lab">邮箱</label></div>
+						<div class="weui-cell__bd"><input class="weui-input" type="email" pattern="[0-9]*" placeholder="请输入邮箱"></div>
+					</div>
+					<div class="weui-cell">
+						<div class="weui-cell__hd"><label for="name" class="weui-label wy-lab">所在地区</label></div>
+						<div class="weui-cell__bd"><input class="weui-input" id="address" type="text" value="湖北省 武汉市 武昌区" readonly="" data-code="420106" data-codes="420000,420100,420106"></div>
+					</div>
+					<div class="weui-cell">
+						<div class="weui-cell__hd"><label class="weui-label wy-lab">详细地址</label></div>
+						<div class="weui-cell__bd">
+							<textarea class="weui-textarea" placeholder="江苏省南京市江宁区秣周东路紫金创业社区4号楼1300室"></textarea>
+						</div>
+					</div>
+					<div class="weui-cell weui-cell_switch">
+						<div class="weui-cell__bd">设为默认地址</div>
+						<div class="weui-cell__ft"><input class="weui-switch" type="checkbox"></div>
+					</div>
 				</div>
-				<div class="weui-media-box__hd proinfo-txt-l" style="width:16px;">
-					<div class="weui-cell_access"><span class="weui-cell__ft"></span></div>
-				</div>
+				<div class="weui-btn-address_botton">
+					<a class="weui-btn weui-btn_primary" href="javascript:" id="showTooltips">保存此地址</a>
+					<a href="javascript:;" class="weui-btn weui-btn_warn">删除此地址</a>
 			</div>
+				</div>					
+					</div>
+					<div class="weui-media-box__hd proinfo-txt-l" style="width:16px;">
+						<div class="weui-cell_access"><span class="weui-cell__ft"></span></div>
+						</div>
+					</div>
+				</div>
+			<div>
 		</div>
-
 		<div class="wy-media-box weui-media-box_text">
 			<div class="weui-media-box__bd">
 				<div class="weui-media-box_appmsg ord-pro-list">
@@ -63,7 +117,6 @@
 				</div>
 			</div>
 		</div>
-
 		<div class="wy-media-box weui-media-box_text">
 			<div class="weui-media-box__bd">
 				<p class="weui-media-one">运费</p>
@@ -83,5 +136,32 @@
 			</a>
 		</div>
 	</body>
+	<script src="../..//js/jquery-2.1.4.js"></script>
+	<script src="../../js/fastclick.js"></script>
+	<script type="text/javascript" src="../../js/city-picker.js" ></script>
+	<script type="text/javascript" src="../../js/jquery.Spinner.js"></script>
+	<script>
+			$(function() {
+				FastClick.attach(document.body);
+			});
+	</script>
+	<script src="../../js/jquery-weui.js"></script>
+	<script>
+		$(function(){
+			$('#add_address').click(function(){
+				console.log(111);
+				$('#add-address').removeClass('add_model');
+			});
+			$("#address").cityPicker({
+				title: "选择出发地",
+				onChange: function(picker, values, displayValues) {
+					console.log(values, displayValues);
+				}
+			});
+			$('#showTooltips').click(function(){
+				$('#add-address').addClass('add_model');
+			})
+		})
 
+	</script>
 </html>

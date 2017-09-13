@@ -2813,6 +2813,9 @@ input.check {
 	text-align: center;
 	font-family: PingFangSC-Regular, sans-serif;
 }
+.add_model {
+	display: none;
+}
 .beInv>p:nth-of-type(1){
 	color: #fff;
 	font-size: 18px;
